@@ -1,3 +1,6 @@
-# My-Web-Space
+# Web Developement Lessons 
+___________________________
 
-Build with HTML5, CSS3, Fullpage.js, animated.css, and Bootstrap 
+
+1. HTML5
+2. CSS
