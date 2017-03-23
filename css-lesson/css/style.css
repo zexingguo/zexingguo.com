@@ -1,1 +1,114 @@
 /*Custom CSS*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    display: block;
+    width: 60%;
+
+}
+
+.bronze {
+    color: #cd7f32;
+}
+
+.silver{
+    color: #E0E0E0;
+}
+
+.gold{
+    color: #ffd700;
+}
+
+.diamond{
+    color: #b9f2ff;
+}
+
+nav{
+  text-align: center;
+}
+
+.header{
+    width: 100%;
+    height: 60vh;
+    background: #03A9F4;
+}
+
+.logo{
+    display: inline-block;
+    width: 80px;
+    margin: 20px;
+}
+
+.nav-list{
+    list-style: none;
+    display: inline-block;
+    padding-left: 0;
+    vertical-align: top;
+    margin-top: 50px;
+}
+
+.nav-list li{
+    display: inline;
+    padding: 25px;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.nav-list li:hover{
+    background-color: rgba(255,255,255,.3);
+}
+
+.header-title{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-top: 20px;
+    text-shadow: 0 0.5px 1px #eee;
+}
+
+.header-title-2{
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+
+.master{
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.arrow-row{
+    position: relative;
+}
+
+.arrow{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+}
