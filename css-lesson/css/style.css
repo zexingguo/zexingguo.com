@@ -11,10 +11,24 @@ body a{
     color: inherit;
 }
 
+header{
+    min-height: 100vh;
+}
+
 .container{
     display: block;
-    width: 60%;
+    width: 80%;
+    margin: 100px auto;
+}
 
+.countDown{
+    display: table;
+    margin:15px auto;
+    font-size: 70px;
+}
+
+.text-center{
+    text-align: center;
 }
 
 .bronze {
@@ -107,8 +121,116 @@ nav{
 
 .arrow{
     position: absolute;
-    top: 50px;
+    top: 10px;
     left: 0;
     right: 0;
     margin:0 auto;
+}
+
+.section-h1{
+    display: table;
+    margin: 0 auto;
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #494949;
+}
+
+.huge-title{
+    font-size: 80px;
+    letter-spacing: 5px;
+    color: #03A9F4;
+    text-transform: uppercase;
+}
+
+.p {
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #494949;
+}
+
+.btn-blue{
+    display: block;
+    margin: 20px auto;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 20px 50px;
+    background: transparent;
+    border: 5px solid #03A9F4;
+    border-radius: 10px;
+    color: #03A9F4;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-blue:focus{
+    outline: hidden;
+}
+
+.btn-blue:hover{
+    background: #03A9F4;
+    color: #fff;
+}
+
+.btn-blue:active{
+    transform: translateY(5px);
+}
+
+.hr-div{
+    border:0;
+    margin: 100px auto;
+    border-top: 3px solid #03A9F4;
+}
+
+.div-center{
+    display: block;
+    margin:0 auto;
+    width: 60%;
+}
+
+.ul-blue{
+    color: #03A9F4;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.ul-blue li{
+    margin: 30px auto;
+    color: #494949;
+}
+
+.ul-blue li>span{
+    color:red;
+}
+
+.border-styles{
+    color: #03A9F4;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.ul-blue li{
+    margin: 30px auto;
+    color: #494949;
+}
+
+.border-1{
+    border: 1px solid red;
+}
+
+.border-2{
+    border-top: 2px solid red;
+}
+
+.border-3{
+    border-right: 3px solid red;
+}
+
+.border-4{
+    border-bottom: 4px solid red;
+}
+
+.border-5{
+    border-left: 5px solid red;
 }

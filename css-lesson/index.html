@@ -26,15 +26,136 @@
                 <img class="arrow" src="./imgs/arrow-down.png"  alt="arrow"/>
             </div>
         </div>
+        <h1 class="huge-title text-center">Time Before Class Starts</h1>
+        <div id="countDown" class="countDown"></div>
       </header>
 
       <main>
+        <div class="container">
+            <h1 class="section-h1 text-center bronze">CSS Bronze Tutortial</h1>
+            <section>
+              <h1 class="huge-title text-center">What is CSS&nbsp;?</h1>
+              <p class="p text-center">
+                CSS stands for <b>Cascading Style Sheets</b>
+                <br /><br /><br />
+                CSS describes <b>how HTML elements are to be displayed on screen, paper, or in other media</b>
+                <br /><br /><br />
+                <b>CSS saves a lot of work</b>. It can control the layout of multiple web pages all at once
+                <br /><br /><br />
+                External stylesheets are stored in <b>CSS files</b>
+              </p>
+            </section>
+              <hr class="hr-div" />
+            <section>
+              <h1 class="huge-title text-center">WHY Use CSS&nbsp;?</h1>
+              <p class="p text-center">
+                CSS is used to define styles for your web pages<br /><br /><br />
+                Including the design, layout and variations in display for different devices and screen sizes.
+              </p>
+              <button id="toggleStyle" class="btn-blue">Try No CSS</button>
+            </section>
+            <hr class="hr-div" />
+            <section class="text-center">
+              <h1 class="huge-title">CSS Syntax</h1>
+                <img src="./imgs/selector.gif" />
+                <p class="p">
+                  The <b>selector</b> points to the <b>HTML element</b> you want to style.
+                  <br /><br />
+                  The <b>declaration block</b> contains one or more declarations separated by semicolons.
+                  <br /><br />
+                  Each declaration includes a CSS property <b>name and a value</b>, separated by a colon.
+                  <br /><br />
+                  A CSS <b>declaration</b> always ends with a <b>semicolon</b>, and declaration blocks are surrounded by <b>curly braces</b>.
+                </p>
+                <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax1" target="_blank">
+                  <button class="btn-blue">Let's Play</button>
+                </a>
+            </section>
+            <hr class="hr-div" />
+            <section>
+              <h1 class="huge-title text-center">Colors and Background<br />Height and Width</h1>
+              <div class="div-center">
+                <h2 class="big-h1">Colors in CSS are most often specified by:</h2>
+                <ul class="ul-blue">
+                  <li>a valid color name - like <span>"red"</span></li>
+                  <li>an RGB value - like <span>"rgb(255, 0, 0)"</span></li>
+                  <li>a HEX value - like <span>"#ff0000"</span></li>
+                </ul>
+              </div>
+              <div class="div-center">
+                <h2 class="big-h1">CSS Background</h2>
+                <ul class="ul-blue">
+                  <li>background-color: The background-color property specifies the background color of an element.</li>
+                </ul>
+              </div>
+              <div class="div-center">
+                <h2 class="big-h1">CSS Height/Width</h2>
+                <ul class="ul-blue">
+                  <li>The height and width properties are used to set the <b>height</b> and <b>width</b> of an element.</li>
+                </ul>
+              </div>
+              <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_dim_height_width2" target="_blank">
+                <button class="btn-blue">Let's Play</button>
+              </a>
+            </section>
+            <hr class="hr-div" />
+            <section>
+              <h1 class="huge-title text-center">CSS Borders and Padding</h1>
+              <div class="div-center">
+                <h2 class="big-h1">CSS Border Properties</h2>
+                <ul class="ul-blue">
+                  <li>The CSS border properties allow you to specify the style, width, and color of an element's border.</li>
+                  <li>
+                    <p>
+                      How to Write Styles for Border ?<br />
+                      li { <br />
+                      border-width: 1px; <br />
+                      border-styles: solid; <br />
+                      border-color: red; <br />
+                      }
+                    </p>
+                    OR
+                    <p>
+                      li { <br />
+                      border: 1px solid red;<br />
+                      }
+                    </p>
+                  </li>
+                  <li>
+                    Different Border style
+                      <ol class="border-styles">
+                        <li class="border-1">(Border All Side) {border: 1px solid red;}</li>
+                        <li class="border-2">(Border TOP Side)  {border-top: 2px solid red;}</li>
+                        <li class="border-3">(Border RIGHT Side)  {border-right: 3px solid red;}</li>
+                        <li class="border-4">(Border BOTTOM Side)  {border-bottom: 4px solid red;}</li>
+                        <li class="border-5">(Border LEFT Side)  {border-left: 5px solid red;}</li>
+                      </ol>
+                  </li>
+                </ul>
+              </div>
 
+              <div class="div-center">
+                <h2 class="big-h1">CSS Padding</h2>
+                <ul class="ul-blue">
+                  <li>
+                    The CSS padding properties are used to generate space around content.
+                    <br /><br />
+                    The padding clears an area around the content (inside the border) of an element.
+                    <br /><br />
+                    With CSS, you have full control over the padding. There are CSS properties for setting the padding for each side of an element (top, right, bottom, and left).
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+        </div>
       </main>
 
       <footer>
 
       </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
     </body>
 </html>
