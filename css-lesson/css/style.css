@@ -83,6 +83,7 @@ nav{
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 3px;
+    text-shadow: 0.5px .5px 0 #494949;
 }
 
 .nav-list li:hover{
@@ -146,7 +147,6 @@ nav{
 .p {
     font-size: 30px;
     letter-spacing: 1px;
-    line-height: 24px;
     color: #494949;
 }
 
@@ -233,4 +233,9 @@ nav{
 
 .border-5{
     border-left: 5px solid red;
+}
+
+.border-padding{
+    border: 1px solid red;
+    padding: 15px;
 }
