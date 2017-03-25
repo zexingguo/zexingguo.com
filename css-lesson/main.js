@@ -1,8 +1,8 @@
 $( document ).ready(function() {
 
 
-  $('#toggleStyle').click(function(){
-
+  $('#toggleStyle').click(function(e){
+            e.preventDefault();
             if($('link')[0].hasAttribute('href')){
                 $('link').removeAttr("href");
                 $('#toggleStyle').html('Style with CSS');
