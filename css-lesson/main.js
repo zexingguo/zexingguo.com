@@ -33,7 +33,7 @@ $( document ).ready(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     // Output the result in an element with id="demo"
-    $("#countDown").html(dats + "Dats " + hours + " Hours "
+    $("#countDown").html(days + " Days " + hours + " Hours "
     + minutes + "m " + seconds + "s");
 
     // If the count down is over, write some text
