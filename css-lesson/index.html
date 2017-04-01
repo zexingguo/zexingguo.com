@@ -13,8 +13,8 @@
                 <img class="logo" src="./imgs/logo.png" alt="logo" />
               </a>
               <ul class="nav-list">
-                <li><a href="index.html">CSS <span class="bronze">Bronze</span></a></li>
-                <li><a href="#">CSS <span class="silver">Silver</span></a></li>
+                <li><a href="#bronze">CSS <span class="bronze">Bronze</span></a></li>
+                <li><a href="#silver">CSS <span class="silver">Silver</span></a></li>
                 <li><a href="#">CSS <span class="gold">Gold</span></a></li>
                 <li><a href="#">CSS <span class="diamond">Diamond</span></a></li>
               </ul>
@@ -29,7 +29,7 @@
 
       <main>
         <div class="container">
-            <h1 class="section-h1 text-center bronze">CSS Bronze Tutortial</h1>
+            <h1 id="#bronze" class="section-h1 text-center bronze">CSS Bronze Tutortial</h1>
             <section>
               <h1 class="huge-title text-center">What is CSS&nbsp;?</h1>
               <p class="p text-center">
@@ -190,6 +190,262 @@
                 <button class="btn-blue">See my example</button>
               </a>
             </section>
+            <div class="hr-div"></div>
+            <h1 id="silver" class="section-h1 text-center silver">CSS Silver Tutortial</h1>
+
+            <section>
+              <h1 class="huge-title text-center">Externa CSS Class</h1>
+              <div class="div-center">
+                <h2 class="big-h1">How to Link Stylesheet with your HTML </h2>
+                <ol class="ul-blue">
+                  <li>
+                    Create a new HTML File
+                  </li>
+                  <li>
+                    Create a Link Tag inside your head Tag
+                  </li>
+                </ol>
+                <p class="p">
+                  &lt;head&gt;<br />
+                  &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br />
+                  &lt;/head&gt;
+                </p>
+              </div>
+
+            </section>
+            <div class="hr-div"></div>
+
+            <section>
+              <h1 class="huge-title text-center"> CSS Class</h1>
+              <div class="div-center">
+                <h2 class="big-h1">How to create css class </h2>
+                <ol class="ul-blue">
+                  <li>
+                    .className {
+                        font-size: 30px;
+                    }
+                  </li>
+                  <li>
+                    &lt;p class="className"&gt;
+                    &lt;p&gt;
+                  </li>
+                </ol>
+
+              </div>
+
+            </section>
+
+            <div class="hr-div"></div>
+
+            <section>
+              <h1 class="huge-title text-center"> Fonts</h1>
+              <div class="div-center">
+                <h2 class="big-h1">Fonts:</h2>
+                <p class="p">
+                    Different Between Serif and Sans-serif Fonts
+                </p>
+                <img src="imgs/serif.gif" alt="serif" />
+                <p class="p">
+                  In CSS, there are two types of font family names:
+                </p>
+                <ul class="ul-blue">
+                  <li>
+                    generic family - a group of font families with a similar look (like "Serif" or "Monospace")
+                  </li>
+                  <li>
+                    font family - a specific font family (like "Times New Roman" or "Arial")
+                  </li>
+                </ul>
+
+                <h2>Font Style:</h2>
+                <p class="p">
+                  The font-style property is mostly used to specify italic text.
+                </p>
+                <p class="p">
+                  This property has three values:
+                </p>
+                <ul  class="ul-blue">
+                  <li>
+                    normal - The text is shown normally
+                  </li>
+                  <li>
+                    italic - The text is shown in italics
+                  </li>
+                  <li>
+                    oblique - The text is "leaning" (oblique is very similar to italic, but less supported)
+                  </li>
+                </ul>
+
+                <h2>Font Size and Font Weight:</h2>
+                  <p class="p">
+                    The font-size property sets the size of the text.
+                    <br /><br />
+                    Always use the proper HTML tags, like &lt;h1&gt; - &lt;h6&gt; for headings and &lt;p&gt; for paragraphs.
+                  </p>
+                  <p class="p">
+                    Style Font Size using EM or PX<br />
+                    1 em = 16px
+                  </p>
+                  <ul  class="ul-blue">
+                    <li>
+                      p{
+                        font-size: 16px;
+                      }
+                    </li>
+                    <li>
+                      p{
+                        font-size: 1em;
+                      }
+                    </li>
+                  </ul>
+                </p>
+                <p class="p">
+                  The font-weight property specifies the weight of a font:
+                </p>
+                <ul  class="ul-blue">
+                  <li>
+                    p {
+                        font-weight: normal;
+                    }
+                  </li>
+                  <li>
+                    p {
+                        font-weight: bold;
+                    }
+                  </li>
+                  <li>
+                    p {
+                        font-weight: 800;
+                    }
+                  </li>
+                </ul>
+              </div>
+
+            </section>
+
+            <div class="hr-div"></div>
+
+            <section>
+              <h1 class="huge-title text-center"> CSS Margins</h1>
+              <div class="div-center">
+                <h2 class="big-h1">
+                  Margin - Individual Sides
+                </h2>
+                <p>
+                  CSS has properties for specifying the margin for each side of an element:
+                </p>
+                <ul class="ul-blue">
+                  <li>
+                    margin-top
+                  </li>
+                  <li>
+                    margin-right
+                  </li>
+                  <li>
+                    margin-bottom
+                  </li>
+                  <li>
+                    margin-left
+                  </li>
+                </ul>
+                <p class="p">
+                  All the margin properties can have the following values:
+                </p>
+                <ul class="ul-blue">
+                  <li>
+                    auto - the browser calculates the margin
+                  </li>
+                  <li>
+                    length - specifies a margin in px, pt, cm, etc.
+                  </li>
+                  <li>
+                    % - specifies a margin in % of the width of the containing element
+                  </li>
+                  <li>
+                    inherit - specifies that the margin should be inherited from the parent element
+                  </li>
+                </ul>
+                <p class="p">
+                  Example:
+                </p>
+                <p class="p">
+                  p {<br />
+                      margin-top: 100px;<br />
+                      margin-bottom: 100px;<br />
+                      margin-right: 150px;<br />
+                      margin-left: 80px;<br />
+                  }
+                </p>
+                <p class="p">
+                  p {
+                    <br />
+                      margin: 100px 150px 100px 80px;
+                    <br />
+                  }
+                </p>
+                <p class="p" style="margin: 100px 150px 100px 80px; background:red; color:#fff;">
+                  I have Margin Around me
+                </p>
+                <p class="p" style="padding:100px 150px 100px 80px; background:red; color:#fff;">
+                  I have Padding Around me
+                </p>
+              </div>
+
+            </section>
+            <div class="hr-div"></div>
+
+            <section>
+              <h1 class="huge-title text-center"> CSS Lists</h1>
+
+              <div class="div-center">
+                <h2 class="big-h1">HTML Lists and CSS List Properties</h2>
+                <p class="p">
+                  In HTML, there are two main types of lists:
+                </p>
+                <ul class="ul-blue">
+                  <li>
+                    unordered lists (&lt;ul&gt;) - the list items are marked with bullets
+                  </li>
+                  <li>
+                    ordered lists (&lt;ol&gt;) - the list items are marked with numbers or letters
+                  </li>
+                </ul>
+              </div>
+
+            </section>
+            <div class="hr-div"></div>
+
+            <section>
+              <h1 class="huge-title text-center"> CSS Pseudo-classes</h1>
+
+              <div class="div-center">
+                <h2 class="big-h1">What are Pseudo-classes?
+                s</h2>
+                <p>
+                  A pseudo-class is used to define a special state of an element.
+                </p>
+                <ul class="ul-blue">
+                  <li>
+                    Style an element when a user mouses over it
+                  </li>
+                  <li>
+                    p:hover {
+                        color: #FF0000;
+                    }
+                  </li>
+                  <li>
+                    <p class="hover-ex">
+                      Hover Exampl
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <h1 class="text-center" style="border: 3px solid #03A9F4; padding: 30px 20px;">
+                Lets Open Atom and code with me
+              </h1>
+            </section>
+
             <div class="hr-div"></div>
             <section>
               <h1 class="huge-title text-center">My Contact</h1>

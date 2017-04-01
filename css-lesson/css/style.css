@@ -36,7 +36,7 @@ header{
 }
 
 .silver{
-    color: #E0E0E0;
+    color: #ccc;
 }
 
 .gold{
@@ -238,4 +238,8 @@ nav{
 .border-padding{
     border: 1px solid red;
     padding: 15px;
+}
+
+.hover-ex:hover{
+    color: #FF0000;
 }
