@@ -243,3 +243,32 @@ nav{
 .hover-ex:hover{
     color: #FF0000;
 }
+
+.code-background{
+    background:#1C223C;
+    padding: 20px;
+    color: #f7f7f9;
+}
+
+.hw-header{
+    width: 100%;
+    height: 500px;
+    background-color: #1C223C;
+    text-align: center;
+}
+
+.hw-nav{
+    margin:0 auto;
+    padding-top: 50px;
+}
+.hw-nav li{
+    display: inline;
+    color: #f7f7f9;
+    font-size: 30px;
+    margin: 0 20px;
+}
+.hw-h1{
+    font-size: 50px;
+    color: #f7f7f9;
+    margin-top: 80px;
+}
