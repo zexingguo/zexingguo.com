@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+}
+.header{
+    width: 100%;
+    height: 500px;
+    background-color: skyblue;
+    text-align: center;
+}
+.nav{
+    margin: 0;
+    padding-top: 30px;
+}
+.nav li{
+    display: inline;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.header-h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-top: 50px;
+}
+.container{
+    width: 70%;
+    margin: 15px auto;
+    text-align: center;
+}
+.redblock{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #f44336;
+    margin: 20px;
+}
+.blueblock{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #2196F3;
+    margin: 20px;
+}
+.purpleblock{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #9C27B0;
+  margin: 20px;
+}
+.blackblock{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #212121;
+  margin: 20px;
+}
+.grayblock{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #9E9E9E;
+  margin: 20px;
+}
+.goldblock{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #FFEB3B;
+  margin: 20px;
+}
+.greenblock{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #4CAF50;
+  margin: 20px;
+}
+.orangeblock{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #FF9800;
+  margin: 20px;
+}
+.image{
+  width: 50%;
+}
+.img{
+  max-width: 100%;
+}
