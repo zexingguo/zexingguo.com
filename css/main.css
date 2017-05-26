@@ -1,0 +1,499 @@
+/*main style */
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+#wrapper{
+    display: none;
+}
+/*Section 0 Background Image*/
+#section0{
+    background:url('../img/home.jpg');
+    background-size: cover;
+}
+
+/*Page Loader CSS*/
+ @keyframes spin {
+    from{
+              -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+          }to{
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+          }
+      }
+
+@-webkit-keyframes spin{
+    from{
+              -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+          }to{
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+          }
+}
+
+#pageLoader {
+          background: #00bfff;
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          left: 0;
+          top: 0;
+      }
+.spinner{
+          width: 60px;
+          height: 60px;
+
+          border: 5px solid #00bfff;
+          border-top: 5px solid #ff4000;
+          border-bottom: 5px solid #ffc000;
+          border-radius: 100%;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+
+          animation: 1s spin infinite linear;
+          -webkit-animation: 1s spin infinite linear;
+          -moz-animation: 1s spin infinite linear;
+      }
+
+.spinner2 {
+          width: 20px;
+          height: 20px;
+          background: #fff;
+
+          border-radius: 100%;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-duration: 2s;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+      }
+
+/*Customize Nav Bar*/
+
+.navbar-inverse{
+    background: transparent;
+    border: none;
+}
+
+.navbar-inverse .navbar-brand{
+    background: transparent;
+    padding-top: 20px;
+}
+
+.navbar-inverse .navbar-brand .logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 2.1em;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand .logo:active{
+     background: transparent;
+}
+
+.navbar-nav li{
+    padding: 20px;
+    margin: 5px 15px;
+    font-size: 2em;
+    font-family: 'Shadows Into Light', cursive;
+    text-transform: uppercase;
+}
+.navbar-nav li: first-child{
+    margin-left: 5px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover{
+    color: #ff4000;
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: #ff4000;
+}
+
+/*Typing Text Cursor Style*/
+
+.intro{
+    margin: 0 auto;
+    width: 50%;
+    color: white;
+}
+
+@media only screen and (max-width: 400px){
+    .intro{
+        width: 80%;
+        margin-top:20px;
+    }
+}
+
+
+#typing_text{
+   font-family: 'Shadows Into Light', cursive;
+   color: white;
+   font-size: 5em;
+   text-align: center;
+}
+
+@media only screen and (max-width: 750px){
+    #typing_text{
+        font-size: 3.2em;
+    }
+}
+
+.handAnimation{
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+}
+
+/*Bootstrap Fixed*/
+.btn{
+    border:none;
+}
+
+/*Section 1*/
+#section1{
+    color: white;
+    font-size: 1.2em;
+}
+
+.resume-left{
+    margin-top: 80px;
+}
+
+.resume-left h1{
+    font-size: 2.5em;
+}
+
+.projects{
+    margin-top: 30px;
+}
+
+.projects ul{
+    margin-top: 20px;
+}
+
+.projects li{
+    list-style: none;
+}
+
+.projects ul li h4{
+    font-weight: bold;
+}
+
+.projects ul li span{
+    font-style: italic;
+    font-weight: 100;
+}
+
+.education{
+    margin-top: 30px;
+}
+
+.education h4{
+    font-weight: bold;
+}
+
+.education span{
+    font-style: italic;
+    font-weight: 100;
+}
+
+.experience{
+    margin-top: 30px;
+}
+
+.experience h4{
+    font-weight: bold;
+}
+
+.experience span{
+    font-style: italic;
+    font-weight: 100;
+}
+
+.resume-right{
+    margin-top: 120px;
+}
+
+.contact a{
+    color: white;
+    cursor: pointer;
+}
+
+.skills{
+    margin-top: 50px;
+}
+
+.skills ul li{
+    list-style: none;
+}
+
+.skills li{
+    margin-top: 5px;
+}
+
+.tools{
+    margin-top: 50px;
+}
+
+.tools ul li{
+    list-style: none;
+}
+
+.tools li{
+    margin-top: 5px;
+}
+
+.lang{
+    margin-top: 50px;
+}
+
+/*Section 2*/
+.clr-padding{
+    padding: 0;
+}
+.hover-effect{
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hover-effect .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: rgba(75,75,75,0.7);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hover-effect:hover .overlay{
+    background-color: rgba(48, 152, 157, 0.4);
+}
+
+.hover-effect img{
+    height:500px;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.hover-effect h2{
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 30%;
+    font-size: 25px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transform: translateY(45px);
+    transform: translateY(45px);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hover-effect:hover h2{
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
+.hover-effect a.info{
+      display: inline-block;
+      text-decoration: none;
+      padding: 7px 14px;
+      text-transform: uppercase;
+      font-size: 1.3em;
+      color: #fff;
+      border: 3px solid #fff;
+      background-color: transparent;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      font-weight: normal;
+      margin: 150px 0 0 0;
+      padding: 62px 100px;
+}
+
+.hover-effect:hover a.info{
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.hover-effect a.info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+/*Section 3*/
+.myImg{
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+@media only screen and (max-width: 600px){
+    .myImg{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.page-header{
+    border: none;
+}
+
+.page-header p{
+    font-size: 1.3em;
+
+}
+
+/*Hover Effects*/
+/* Bob */
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+/* Bounce In */
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
