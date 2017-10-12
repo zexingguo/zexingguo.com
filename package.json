@@ -2,7 +2,9 @@
   "name": "Portfolio",
   "version": "0.0.1",
   "description": "My Web Portfolio to showcase my skills etc..",
-  "dependencies": {},
+  "dependencies": {
+    "bulma": "^0.6.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.7",
     "gulp": "^3.9.1",

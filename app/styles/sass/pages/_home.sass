@@ -1,0 +1,85 @@
+.home__section
+  background: url('../images/home.jpg') center center / cover no-repeat
+  position: relative
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgb(0, 0, 0)
+    opacity: .3
+
+.hero-body 
+  z-index: 3
+
+.home__intro
+  text-align: center
+  small
+    text-transform: capitalize
+  .title
+    +tablet
+      letter-spacing: 2px
+
+.home__intro-name
+  font-size: $size-4
+
+.home__intro-summary
+  display: block
+  width: 50%
+  margin: 0 auto
+  text-align: center
+  +widescreen
+    width: 30%
+  +desktop
+    width: 40%
+  +mobile
+    display: none
+
+.home__intro-hr
+  display: block;
+  width: 55px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 15px auto 5px;
+
+.home__intro-social 
+  margin-top: 10px
+
+.home__intro-icon
+  display: inline-block
+  width: 35px
+  height: 35px
+  border: 2px solid #fff
+  border-radius: 3px
+  position: relative
+  transform: rotate(50deg)
+  margin-right: 20px
+  transition: .3s
+  cursor: pointer
+  &:last-child
+    margin-right: 0
+  &:hover
+    background: #fff
+  &:hover > svg
+    color: $grey-darker
+  a
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 3
+  svg
+    width: 17px
+    height: 17px
+    color: #fff
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) rotate(-50deg)
+    transition: .3s
+

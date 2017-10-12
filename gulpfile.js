@@ -79,10 +79,10 @@ gulp.task('scripts-deploy', function() {
                 .pipe(gulp.dest('dist/scripts'));
 });
 
-//compiling our SCSS files
+//compiling our sass files
 gulp.task('styles', function() {
-    //the initializer / master SCSS file, which will just be a file that imports everything
-    return gulp.src('app/styles/scss/init.scss')
+    //the initializer / master sass file, which will just be a file that imports everything
+    return gulp.src('app/styles/sass/init.scss')
                 //prevent pipe breaking caused by errors from gulp plugins
                 .pipe(plumber({
                   errorHandler: function (err) {
@@ -92,11 +92,11 @@ gulp.task('styles', function() {
                 }))
                 //get sourceMaps ready
                 .pipe(sourceMaps.init())
-                //include SCSS and list every "include" folder
+                //include sass and list every "include" folder
                 .pipe(sass({
                       errLogToConsole: true,
                       includePaths: [
-                          'app/styles/scss/'
+                          'app/styles/sass/'
                       ]
                 }))
                 .pipe(autoprefixer({
@@ -115,20 +115,20 @@ gulp.task('styles', function() {
                 .pipe(browserSync.reload({stream: true}));
 });
 
-//compiling our SCSS files for deployment
+//compiling our sass files for deployment
 gulp.task('styles-deploy', function() {
-    //the initializer / master SCSS file, which will just be a file that imports everything
-    return gulp.src('app/styles/scss/init.scss')
+    //the initializer / master sass file, which will just be a file that imports everything
+    return gulp.src('app/styles/sass/init.scss')
                 .pipe(plumber())
-                //include SCSS includes folder
+                //include sass includes folder
                 .pipe(sass({
-                      includePaths: [
-                          'app/styles/scss',
-                      ]
+                    includePaths: [
+                        'app/styles/sass',
+                    ]
                 }))
                 .pipe(autoprefixer({
-                  browsers: autoPrefixBrowserList,
-                  cascade:  true
+                browsers: autoPrefixBrowserList,
+                cascade:  true
                 }))
                 //the final filename of our combined css file
                 .pipe(concat('styles.css'))
@@ -197,11 +197,11 @@ gulp.task('scaffold', function() {
 //  this will:
 //  startup the web server,
 //  start up browserSync
-//  compress all scripts and SCSS files
+//  compress all scripts and sass files
 gulp.task('default', ['browserSync', 'scripts', 'styles'], function() {
     //a list of watchers, so it will watch all of the following files waiting for changes
     gulp.watch('app/scripts/src/**', ['scripts']);
-    gulp.watch('app/styles/scss/**', ['styles']);
+    gulp.watch('app/styles/sass/**', ['styles']);
     gulp.watch('app/images/**', ['images']);
     gulp.watch('app/*.html', ['html']);
 });
