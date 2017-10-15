@@ -26,7 +26,7 @@
 
 .home__intro-name
   font-size: $size-4
-  font-family: 'Varela Round', sans-serif
+  // font-family: 'Varela Round', sans-serif
 
 .home__intro-summary
   display: block
@@ -41,12 +41,12 @@
     display: none
 
 .home__intro-hr
-  display: block;
-  width: 55px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 5px;
-  margin: 15px auto 5px;
+  display: block
+  width: 55px
+  height: 5px
+  background-color: #fff
+  border-radius: 5px
+  margin: 15px auto 5px
 
 .home__intro-social 
   margin-top: 10px
@@ -97,8 +97,101 @@
     transition: .3s
     text-transform: uppercase
 
-//Section 2
+//About Section
 
 .navbar-brand a 
   font-family: 'Pacifico', cursive
   font-size: 25px
+
+.home__about-section
+  display: flex
+  flex-direction: column
+  margin-top: 80px
+  margin-bottom: 100px
+  h2
+    font-size: $size-1
+    font-family: 'Varela Round', sans-serif
+    text-align: center
+    text-transform: uppercase
+
+.fancy-hr
+  display: flex
+  margin: 20px auto 50px
+  align-items: center
+
+  .line
+    display: block
+    height: 2px
+    width: 35px
+    background: #dbdbdb
+    margin: 0 10px
+  
+  .square 
+    display: block
+    height: 15px
+    width: 15px
+    background: #dbdbdb
+    transform: rotate(50deg)
+
+.home__about-summary
+  padding: 0 20px
+
+  h3
+    font-family: 'Varela Round', sans-serif
+    text-transform: uppercase
+    font-weight: bold
+    margin-bottom: 20px
+  p 
+    margin-bottom: 40px
+
+.home__about-btns
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+.fancy-btn
+  display: flex
+  align-items: center
+  position: relative
+  border: 0
+  padding: 20px 12px
+  margin-right: 20px
+  margin-top: 10px
+  font-family: 'Varela Round', sans-serif
+  font-size: 11px
+  font-weight: bold
+  text-transform: uppercase
+  letter-spacing: .8px
+  color: #ffffff
+  border-radius: 5px
+  outline: none
+  cursor: pointer
+  z-index: 1
+  transition: top .5s
+  &:active
+    box-shadow: none
+    top: 4px
+  svg
+    height: 15px
+    width: 15px
+    margin-right: 10px
+  
+.color-blue
+  background: #52b5d9
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 4px 0px 0px #4ca0c2
+.color-green
+  background: #69c2a1
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 4px 0px 0px #4db08d
+    
+.home__about-card
+  display: block
+  height: 300px
+  margin: 0 auto
+  background: red
+
+  +desktop
+    width: 70%
+  +tablet
+    width: 80%
+  +mobile
+    width: 90%
