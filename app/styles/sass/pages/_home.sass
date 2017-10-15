@@ -107,7 +107,7 @@
   display: flex
   flex-direction: column
   margin-top: 80px
-  margin-bottom: 100px
+  margin-bottom: 80px
   h2
     font-size: $size-1
     font-family: 'Varela Round', sans-serif
@@ -185,13 +185,47 @@
     
 .home__about-card
   display: block
-  height: 300px
   margin: 0 auto
-  background: red
-
+  border: 1px solid $grey-lighter
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
   +desktop
-    width: 70%
+    width: 50%
   +tablet
-    width: 80%
-  +mobile
+    width: 60%
+  +until(769px)
+    width: 50%
+  +until(769px)
+    width: 50%
+  +until(450px)
     width: 90%
+  
+  .home__about-card-image
+    position: relative
+    width: 100%
+    height: 300px
+    background: url('/images/jack.jpg') center center / cover no-repeat
+    &::after
+      content: ''
+      display: block
+      background: #fff
+      width: 100%
+      position: absolute
+      bottom: -2px
+      height: 3px
+    
+    .shape
+      display: block
+      width: 100%
+      height: 300px
+      clip-path: polygon(50% 100%, 100% 68%, 100% 100%, 0 100%, 0 70%)
+      background: #fff
+
+  .home__about-card-detail
+    display: block
+    padding: 30px 20px
+    
+    p 
+      padding-bottom: 5px
+      margin-bottom: 15px
+      border-bottom: 1px solid #eee
