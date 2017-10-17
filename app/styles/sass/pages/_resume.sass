@@ -1,0 +1,195 @@
+.home__resume-section
+  display: flex
+  flex-direction: column
+  margin-top: 80px
+  margin-bottom: 80px
+  h2
+    font-size: $size-1
+    font-family: 'Varela Round', sans-serif
+    text-align: center
+    text-transform: uppercase
+    color: $dark-blue
+  h3
+    color: $dark-blue
+  h4
+    color: $dark-blue
+  
+//Timeline
+.timeline
+  position: relative
+  max-width: 1200px
+  margin: 30px auto
+
+  .square-top
+    display: block
+    height: 13px
+    width: 13px
+    background: #e0e0e0
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%) rotate(45deg)
+    margin-left: -1px
+  .square-bottom
+    display: block
+    height: 13px
+    width: 13px
+    background: #e0e0e0
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%) rotate(45deg)
+    margin-left: -1px
+
+.timeline::before
+  content: ''
+  position: absolute
+  width: 2px
+  background-color: #e0e0e0
+  top: 0
+  bottom: 0
+  left: 50%
+  margin-left: -2px
+
+.timeline_container
+  position: relative
+  background-color: inherit
+  width: 50%
+  &.padding-right
+    padding: 20px 100px 20px 20px
+  &.padding-left
+    padding: 20px 20px 20px 100px
+  
+  //Hover PARTY
+  &:hover .content
+    background: $vue-green
+    color: #fff
+    h4
+      color: #fff
+  &:hover p.time
+    color: $vue-green
+
+
+.left
+  left: 0
+  &:hover::after
+    border-color: transparent transparent transparent $vue-green
+
+.left::before,
+.left::after
+  content: ""
+  display: block
+  position: absolute
+  width: 0
+  height: 0
+  border-style: solid
+
+.left::after
+  top: 41px
+  right: 80px
+  border-color: transparent transparent transparent #fff
+  border-width: 11px
+  transition: .3s
+
+.left:before
+  top: 42px
+  right: 80px
+  border-color: transparent transparent transparent #e0e0e0
+  border-width: 10px
+
+.timeline_container.left > .time
+  display: inline-block
+  background: #fff
+  position: absolute
+  z-index: 3
+  right: -75px
+  top: 40px
+  font-weight: bold
+  font-family: 'Varela Round', sans-serif
+  color: $dark-blue
+  cursor: pointer
+
+.right
+  left: 50%
+  &:hover::after
+    border-color: transparent $vue-green transparent transparent
+
+.right::before,
+.right::after
+  content: ""
+  display: block
+  position: absolute
+  width: 0
+  height: 0
+  border-style: solid
+
+.timeline_container.right > .time
+  display: inline-block
+  background: #fff
+  position: absolute
+  z-index: 3
+  left: -87px
+  top: 70px
+  font-weight: bold
+  font-family: 'Varela Round', sans-serif
+  color: $dark-blue
+  cursor: pointer
+
+.right:before
+  top: 70px
+  left: 80px
+  border-color: transparent #e0e0e0 transparent transparent
+  border-width: 10px
+
+.right::after
+  top: 69px
+  left: 80px
+  border-color: transparent #fff transparent transparent 
+  border-width: 11px
+  transition: .3s
+
+.content
+  padding: 20px 30px
+  background-color: white
+  position: relative
+  border: 1px solid #e0e0e0
+  box-shadow: rgba(10, 10, 10, 0.1) 0px 2px 3px
+  transition: .3s
+  h4
+    margin-bottom: 10px
+
+@media all and (max-width: 600px)
+  .timeline::before
+    left: 31px
+  .timeline
+    .square-top
+      left: 31px
+    .square-bottom
+      left: 31px
+  
+  .timeline_container
+    width: 100%
+    &.padding-right
+      padding: 70px 25px 20px 70px
+  
+    &.padding-left
+      padding: 100px 25px 20px 70px
+
+  .timeline_container.left > .time
+    right: 0
+    left: 5px
+  
+  .timeline_container.right > .time
+    right: 0
+    left: 5px
+  
+  .right
+    left: 0
+
+  .left::before,
+  .left::after
+    display: none
+  
+  .right::before,
+  .right::after
+    display: none
