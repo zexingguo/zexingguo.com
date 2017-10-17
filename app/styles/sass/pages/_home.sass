@@ -1,3 +1,6 @@
+// var
+$dark-blue: #2b3d4f
+
 .home__section
   background: url('../images/home.jpg') center center / cover no-repeat
   position: relative
@@ -58,7 +61,7 @@
   border: 2px solid #fff
   border-radius: 3px
   position: relative
-  transform: rotate(50deg)
+  transform: rotate(45deg)
   margin-right: 20px
   transition: .3s
   cursor: pointer
@@ -113,11 +116,13 @@
     font-family: 'Varela Round', sans-serif
     text-align: center
     text-transform: uppercase
+    color: $dark-blue
 
 .fancy-hr
   display: flex
   margin: 20px auto 50px
   align-items: center
+  justify-content: center
 
   .line
     display: block
@@ -128,10 +133,10 @@
   
   .square 
     display: block
-    height: 15px
-    width: 15px
+    height: 13px
+    width: 13px
     background: #dbdbdb
-    transform: rotate(50deg)
+    transform: rotate(45deg)
 
 .home__about-summary
   padding: 0 20px
@@ -141,6 +146,7 @@
     text-transform: uppercase
     font-weight: bold
     margin-bottom: 20px
+    color: $dark-blue
   p 
     margin-bottom: 40px
 
@@ -189,6 +195,7 @@
   border: 1px solid $grey-lighter
   border-bottom-left-radius: 5px
   border-bottom-right-radius: 5px
+  box-shadow: rgba(10, 10, 10, 0.1) 0px 2px 3px
   +desktop
     width: 50%
   +tablet
@@ -229,3 +236,180 @@
       padding-bottom: 5px
       margin-bottom: 15px
       border-bottom: 1px solid #eee
+
+.home__resume-section
+  display: flex
+  flex-direction: column
+  margin-top: 80px
+  margin-bottom: 80px
+  h2
+    font-size: $size-1
+    font-family: 'Varela Round', sans-serif
+    text-align: center
+    text-transform: uppercase
+    color: $dark-blue
+  h3
+    color: $dark-blue
+  h4
+    color: $dark-blue
+  
+//Timeline
+.timeline
+  position: relative
+  max-width: 1200px
+  margin: 30px auto
+
+  .square-top
+    display: block
+    height: 13px
+    width: 13px
+    background: #e0e0e0
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%) rotate(45deg)
+    margin-left: -1px
+  .square-bottom
+    display: block
+    height: 13px
+    width: 13px
+    background: #e0e0e0
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%) rotate(45deg)
+    margin-left: -1px
+
+.timeline::before
+  content: ''
+  position: absolute
+  width: 2px
+  background-color: #e0e0e0
+  top: 0
+  bottom: 0
+  left: 50%
+  margin-left: -2px
+
+.timeline_container
+  position: relative
+  background-color: inherit
+  width: 50%
+
+  &.padding-right
+    padding: 20px 100px 20px 20px
+  &.padding-left
+    padding: 20px 20px 20px 100px
+
+.left
+  left: 0
+
+.left::before,
+.left::after
+  content: ""
+  display: block
+  position: absolute
+  width: 0
+  height: 0
+  border-style: solid
+
+.left::after
+  top: 41px
+  right: 80px
+  border-color: transparent transparent transparent #fff
+  border-width: 11px
+
+.left:before
+  top: 42px
+  right: 80px
+  border-color: transparent transparent transparent #e0e0e0
+  border-width: 10px
+
+.timeline_container.left > .time
+  display: inline-block
+  background: #fff
+  position: absolute
+  z-index: 3
+  right: -75px
+  top: 40px
+  font-weight: bold
+  font-family: 'Varela Round', sans-serif
+  color: $dark-blue
+
+.right
+  left: 50%
+.right::before,
+.right::after
+  content: ""
+  display: block
+  position: absolute
+  width: 0
+  height: 0
+  border-style: solid
+
+.timeline_container.right > .time
+  display: inline-block
+  background: #fff
+  position: absolute
+  z-index: 3
+  left: -87px
+  top: 70px
+  font-weight: bold
+  font-family: 'Varela Round', sans-serif
+  color: $dark-blue
+
+.right:before
+  top: 70px
+  left: 80px
+  border-color: transparent #e0e0e0 transparent transparent
+  border-width: 10px
+
+.right::after
+  top: 69px
+  left: 80px
+  border-color: transparent #fff transparent transparent 
+  border-width: 11px
+
+.content
+  padding: 20px 30px
+  background-color: white
+  position: relative
+  border: 1px solid #e0e0e0
+  box-shadow: rgba(10, 10, 10, 0.1) 0px 2px 3px
+  h4
+    margin-bottom: 10px
+
+@media all and (max-width: 600px)
+  .timeline::before
+    left: 31px
+  .timeline
+    .square-top
+      left: 31px
+    .square-bottom
+      left: 31px
+  
+  .timeline_container
+    width: 100%
+    &.padding-right
+      padding: 70px 25px 20px 70px
+  
+    &.padding-left
+      padding: 100px 25px 20px 70px
+
+  .timeline_container.left > .time
+    right: 0
+    left: 5px
+  
+  .timeline_container.right > .time
+    right: 0
+    left: 5px
+  
+  .right
+    left: 0
+
+  .left::before,
+  .left::after
+    display: none
+  
+  .right::before,
+  .right::after
+    display: none
