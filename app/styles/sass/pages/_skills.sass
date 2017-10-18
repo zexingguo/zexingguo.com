@@ -1,0 +1,65 @@
+.home__skills-section
+  padding: 50px 20px
+  background: $skill
+  color: #fff
+  h2
+    font-size: $size-1
+    text-transform: uppercase
+    text-align: center
+
+.progress-bar
+  display: flex
+  align-items: center
+  margin: 20px 0
+  +mobile
+    flex-direction: column
+  p
+    font-weight: bold
+
+  .skill-name
+    +desktop
+      width: 15%
+    +touch
+      width: 20%
+    +mobile
+      width: auto
+
+  progress
+    width: 80%
+    background-color: $vue-green
+
+.progress-circle
+  background-color: #fff
+  border-radius: 50%
+  display: inline-block
+  height: 15rem
+  margin: 4rem 2rem 0
+  position: relative
+  width: 15rem
+
+  &:before 
+    align-items: center
+    background-color: transparent
+    border-radius: 50%
+    content: attr(data-progress)'%'
+    display: flex
+    font-size: 3rem
+    justify-content: center
+    position: absolute 
+    left: 1rem
+    right: 1rem
+    top:  1rem
+    bottom: 1rem
+    transition: transform .2s ease
+  &:after
+    background-color: #65bf9e
+    border-radius: 50%
+    content: ''
+    display: inline-block
+    height: 100%
+    width: 100%
+
+$step: 1
+$loops: round(100 / $step)
+$increment: 360 / $loops
+$half: round($loops / 2)

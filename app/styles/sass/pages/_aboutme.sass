@@ -1,8 +1,17 @@
 //About Section
 
-.navbar-brand a 
+a.navbar-item
+  font-family: 'Varela Round', sans-serif
+  color: $dark-blue
+
+.navbar-brand a.navbar-item 
   font-family: 'Pacifico', cursive
   font-size: 25px
+  color: $dark-blue
+
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active
+  background-color: $vue-green
+  color: #fff
 
 .home__about-section
   display: flex
@@ -28,6 +37,8 @@
     width: 35px
     background: #dbdbdb
     margin: 0 10px
+    &.white
+      background: #fff
   
   .square 
     display: block
@@ -35,6 +46,8 @@
     width: 13px
     background: #dbdbdb
     transform: rotate(45deg)
+    &.white
+      background: #fff
 
 .home__about-summary
   padding: 0 20px

@@ -5,6 +5,7 @@
 @import 'bulma/elements/container';
 @import 'bulma/layout/_all';
 @import 'bulma/components/navbar';
+@import 'bulma/elements/progress';
 
 //global things
 @import 'helpers/helper';
@@ -13,3 +14,4 @@
 @import 'pages/_home';
 @import 'pages/_aboutme';
 @import 'pages/_resume';
+@import 'pages/_skills';
