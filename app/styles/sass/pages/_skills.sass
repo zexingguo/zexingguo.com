@@ -7,12 +7,18 @@
     text-transform: uppercase
     text-align: center
 
+.home__skills-more h3
+  text-transform: uppercase
+  text-align: center
+
 .progress-bar
   display: flex
   align-items: center
+  justify-content: center
   margin: 20px 0
   +mobile
     flex-direction: column
+    justify-content: center
   p
     font-weight: bold
 
@@ -25,41 +31,55 @@
       width: auto
 
   progress
-    width: 80%
+    width: 70%
     background-color: $vue-green
+      
+
+$theme-color: #65bf9e
+$back-color: $skill
 
 .progress-circle
-  background-color: #fff
+  background-color: #394047
   border-radius: 50%
-  display: inline-block
-  height: 15rem
-  margin: 4rem 2rem 0
+  display: block
+  height: 10rem
+  width: 10rem
+  margin: 2rem auto .5rem
   position: relative
-  width: 15rem
 
   &:before 
     align-items: center
-    background-color: transparent
+    background-color: $back-color
     border-radius: 50%
     content: attr(data-progress)'%'
     display: flex
-    font-size: 3rem
+    font-size: $size-4
     justify-content: center
     position: absolute 
-    left: 1rem
-    right: 1rem
-    top:  1rem
-    bottom: 1rem
+    left: .6rem
+    right: .6rem
+    top:  .6rem
+    bottom: .6rem
     transition: transform .2s ease
   &:after
-    background-color: #65bf9e
+    background-color: $theme-color
     border-radius: 50%
     content: ''
     display: inline-block
     height: 100%
     width: 100%
+  
 
 $step: 1
 $loops: round(100 / $step)
 $increment: 360 / $loops
 $half: round($loops / 2)
+
+@for $i from 1 through $loops
+  .progress-circle[data-progress="#{$i * $step}"]:after
+    @if $i < $half
+      $next-deg: 90deg + $increment * $i
+      background-image: linear-gradient(90deg, #394047 50%, transparent 50%, transparent), linear-gradient($next-deg, $theme-color 50%, #394047 50%, #394047)
+    @else
+      $next-deg: -90deg + $increment * ($i - $half)
+      background-image: linear-gradient($next-deg, $theme-color 50%, transparent 50%, transparent), linear-gradient(270deg, $theme-color 50%, #394047 50%, #394047)

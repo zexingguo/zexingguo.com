@@ -85,9 +85,18 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
   cursor: pointer
   z-index: 1
   transition: top .5s
+  &:disabled
+    background: #494949 !important
+    box-shadow: none
+    opacity: .3
+    box-shadow: 0px 4px 0px 0px #494949
+    cursor: not-allowed
+
   &:active
     box-shadow: none
     top: 4px
+  a
+    color: inherit
   svg
     height: 15px
     width: 15px
