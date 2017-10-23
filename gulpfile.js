@@ -85,23 +85,23 @@ gulp.task('styles', function() {
     return gulp.src('app/styles/sass/init.scss')
                 //prevent pipe breaking caused by errors from gulp plugins
                 .pipe(plumber({
-                  errorHandler: function (err) {
+                errorHandler: function (err) {
                     console.log(err);
                     this.emit('end');
-                  }
+                }
                 }))
                 //get sourceMaps ready
                 .pipe(sourceMaps.init())
                 //include sass and list every "include" folder
                 .pipe(sass({
-                      errLogToConsole: true,
-                      includePaths: [
-                          'app/styles/sass/'
-                      ]
+                    errLogToConsole: true,
+                    includePaths: [
+                        'app/styles/sass/'
+                    ]
                 }))
                 .pipe(autoprefixer({
-                   browsers: autoPrefixBrowserList,
-                   cascade:  true
+                browsers: autoPrefixBrowserList,
+                cascade:  true
                 }))
                 //catch errors
                 .on('error', gutil.log)

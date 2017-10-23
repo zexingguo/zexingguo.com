@@ -3,13 +3,9 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Zexing Jack Guo -- Full Stack/Frontend Developer -- https://twitter.com/zexingguo
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
+    CSS3, HTML5, Javascript, Bulma, Gulp, Sass
     Apache Server Configs, jQuery, Modernizr, Normalize.css

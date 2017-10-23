@@ -98,3 +98,39 @@
     transform: translate(-50%, -50%) rotate(-45deg)
     transition: .3s
     text-transform: uppercase
+
+.scroll-down
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: absolute
+  left: 0
+  right: 0
+  margin: 0 auto
+  bottom: 1rem
+  cursor: pointer
+    
+  svg
+    color: #ffffff
+    height: 1rem
+    width: 1rem
+    animation: upAnddown 1.5s ease-out infinite
+  p 
+  color: #ffffff
+  font-size: $size-7  
+
+
+@keyframes upAnddown 
+  0%,
+  20%,
+  50%,
+  80%,
+  100% 
+    transform: translateY(0)
+  40%
+    transform: translateY(-10px)
+  60%
+    transform: translateY(-5px)  
+
+    

@@ -21,8 +21,8 @@
     </head>
     <body>
 			<!-- Section 1 Home -->
-			<section class="hero is-fullheight home__section">
-				<div class="hero-body">
+			<section id="home" class="hero is-fullheight home__section">
+				<div class="hero-body position-relative">
 					<div class="container">
 
 						<div class="home__intro">
@@ -55,20 +55,27 @@
 								</div>
 								
 							</div>
+
+
 						</div>
 						
 					</div>
-				</div>
+
+					<div class="scroll-down" onclick="smoothScroll(document.getElementById('about'))">
+						<i data-feather="chevrons-down"></i>
+						<p>Scroll Down</p>
+					</div>
+				</div> <!-- End of Hero body -->
 			</section>
 			<!-- END Section 1 Home -->
 
 			<!-- Section 2 -->
-			<section>
+			<section id="about" class="position-relative">
 				
 				<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
 					<div class="container">
 						<div class="navbar-brand">
-							<a class="navbar-item" href="#!">
+							<a class="navbar-item" onclick="smoothScroll(document.getElementById('home'))">
 									ZexingJackGuo
 							</a>
 							<div class="navbar-burger burger" data-target="navMenuColorlink-example">
@@ -79,25 +86,22 @@
 						</div>
 						<div class="navbar-menu">
 							<div class="navbar-end">
-								<a class="navbar-item">
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('home'))">
 									Home
 								</a>
-								<a class="navbar-item">
-									About
-								</a>
-								<a class="navbar-item">
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('resume'))">
 									Resume
 								</a>
-								<a class="navbar-item">
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('skills'))">
 									Skills
 								</a>
-								<a class="navbar-item">
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('works'))">
 									Works
 								</a>
-								<a class="navbar-item">
+								<!-- <a class="navbar-item">
 									Blog
-								</a>
-								<a class="navbar-item">
+								</a> -->
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('contact'))">
 									Contact
 								</a>
 							</div>
@@ -105,6 +109,15 @@
 					</div>
 					
 				</nav>
+
+				<!-- Mobile Nav -->
+				<ul class="mobile-nav">
+					<li onclick="MobilesmoothScroll(document.getElementById('home'))">Home</li>
+					<li onclick="MobilesmoothScroll(document.getElementById('resume'))">Resume</li>
+					<li onclick="MobilesmoothScroll(document.getElementById('skills'))">Skills</li>
+					<li onclick="MobilesmoothScroll(document.getElementById('works'))">Works</li>
+					<li onclick="MobilesmoothScroll(document.getElementById('contact'))">Contact</li>
+				</ul>
 
 				<!-- About Me Section -->
 				<div class="home__about">
@@ -122,7 +135,7 @@
 
 							<div class="columns">
 								<div class="column is-7">
-									<div class="home__about-summary">
+									<div class="home__about-summary" data-aos="zoom-in">
 										<h3>Objective</h3>
 										<p>Whole wound wrote at whose to style in. Figure ye innate former do so we. Shutters but sir yourself provided you required his. So neither related he am do believe. Nothing but you hundred had use regular. Fat sportsmen arranging preferred can. Busy paid like is oh. Dinner our ask talent her age hardly. Neglected collected an attention listening do abilities. When be draw drew ye. Defective in do recommend suffering. House it seven in spoil tiled court. Sister others marked fat missed did out use. Alteration possession dispatched collecting instrument travelling he or on. Snug give made at spot or late that mr. 
 										</p>
@@ -196,7 +209,7 @@
 
 			<!-- Resume Section -->
 
-			<section>
+			<section id="resume">
 
 				<div class="home__resume-section">
 					<div class="container">
@@ -245,7 +258,7 @@
 								<div class="content">
 									<h4 class="m-b-5">California State Polytechnic University, Pomona</h4>
 									<p>
-										Majored in Compute Information System and graduated with a BS degree. (GPA: 3.56)
+										Majored in Compute Information System and graduated with a BS degree.
 									</p>
 								</div>
 							</div>
@@ -272,7 +285,7 @@
 			
 			<!-- Skill Section -->
 
-			<section>
+			<section id="skills">
 				<div class="home__skills-section">
 
 					<div class="container">
@@ -373,7 +386,7 @@
 
 			<!-- Work Section -->
 
-			<section>
+			<section id="works">
 
 				<div class="home__works-section">
 					<div class="container">
@@ -478,7 +491,7 @@
 			<section class="home__hire-section">
 				<div class="hire-info">
 					<h2>I'm Available For Freelance Project</h2>
-					<button>Hire Me</button>
+					<button onclick="smoothScroll(document.getElementById('contact'))">Hire Me</button>
 				</div>
 				
 				<div class="hire-overlay"></div>
@@ -489,7 +502,7 @@
 
 			<!-- Contact Section -->
 
-			<section>
+			<section id="contact">
 				<div class="home__contact-section">
 
 					<div class="container">
@@ -521,7 +534,7 @@
 										<label>Message</label>
 										<textarea class="field-textarea" rows="8" cols="50"></textarea>
 									</div>
-									<button class="fancy-btn color-green">Send Message</button>
+									<button class="fancy-btn color-green" onclick="sendMail()">Send Message</button>
 								</div>
 							</div>
 
@@ -561,12 +574,12 @@
 			<footer class="footer">
 				<div class="container">
 					<div class="footer-content has-text-centered">
-						<p>
+						<p class="m-b-5">
 							<b>Designed</b> and <b>Handcrafted</b> By <a href="https://www.linkedin.com/in/zexing-guo-64012ab1/" target="_blank"><b>Zexing Jack Guo</b></a>
 							built with Bulma 
 						</p>
 						<p>
-							Follow me on Twitter <a href="https://twitter.com/zexingguo">@zexingguo</a>
+							Follow Me On Twitter <a href="https://twitter.com/zexingguo">@zexingguo</a>
 						</p>
 						<p><img class="bulma" src="images/bulma-white.png" alt="bulma.io" /></p>
 					</div>

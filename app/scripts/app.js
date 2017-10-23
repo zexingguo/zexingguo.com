@@ -3,44 +3,150 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //Feather Icon
   feather.replace();
 
-  
-  
+  // Check Element Visibilityt
+  var mobile_nav = document.querySelector('.mobile-nav');
+  var burger = document.querySelector('.navbar-burger');
+
+  burger.addEventListener("click", function () {
+    var visible = mobile_nav.isVisible(mobile_nav);
+
+    if (visible) {
+      mobile_nav.classList.toggle('show-nav');
+    } else {
+      mobile_nav.classList.toggle('show-nav');
+    }
+  });
+
+
 });
 
-function animateCircle() {
-  //Auto animation for progress circle
-  var circles = document.querySelectorAll('.progress-circle');
-  console.log(circles);
-  var start = 1;
-  var i = 0;
 
-  setInterval(function () {
-    if (i < circles.length) {
-      var circle = circles[i]
-      var end = circles[i].getAttribute("data-progress")
-      circles[i].setAttribute("data-progress", start)
+// Listen to Scroll and animate Circle
+// window.addEventListener('scroll', function (e) {
+  
+//   var skills = document.querySelector('.home__skills-more');
+//   let firstAppear = false;
 
-      test(end, circle, i)
-    }
+//   if (isInViewport(skills)) {
+//     if (!firstAppear) {
+//       console.log('always herer', firstAppear)
+//       // animateCircle();
+//       firstAppear = true;
+//     } else {
+//       firstAppear = true
+//     }
+//   }
 
-    else return
-    i++
+//   function isInViewport(element) {
+//     var rect = element.getBoundingClientRect();
+//     var html = document.documentElement;
+//     return (
+//       rect.top >= 0 &&
+//       rect.left >= 0 &&
+//       rect.bottom <= (window.innerHeight || html.clientHeight) &&
+//       rect.right <= (window.innerWidth || html.clientWidth)
+//     );
+//   }
 
-  }, 100)
+// });
 
-  function test(end, circle) {
-    var a = 0
-    var startLoad = setInterval(function () {
-      if (a >= end) {
-        // console.log('loop end')
-        // console.log('circle: ', circle)
-        clearInterval(startLoad)
-      } else {
-        a++
-        circle.setAttribute("data-progress", a)
-      }
-    }, 20, end, circle)
+// function animateCircle() {
+//   //Auto animation for progress circle
+//   var circles = document.querySelectorAll('.progress-circle');
+//   console.log(circles);
+//   var start = 1;
+//   var i = 0;
+
+//   setInterval(function () {
+//     if (i < circles.length) {
+//       var circle = circles[i]
+//       var end = circles[i].getAttribute("data-progress")
+//       circles[i].setAttribute("data-progress", start)
+
+//       startLoad(end, circle, i)
+//     }
+
+//     else return
+//     i++
+
+//   }, 100)
+
+//   function startLoad(end, circle) {
+//     var a = 0
+//     var startLoad = setInterval(function () {
+//       if (a >= end) {
+//         // console.log('loop end')
+//         // console.log('circle: ', circle)
+//         clearInterval(startLoad)
+//       } else {
+//         a++
+//         circle.setAttribute("data-progress", a)
+//       }
+//     }, 10, end, circle)
+//   }
+// }
+
+// Smooth Scroll in Plain Javascript
+window.MobilesmoothScroll = function (target) {
+  var mobile_nav = document.querySelector('.mobile-nav');
+  mobile_nav.classList.toggle('show-nav');
+
+  var scrollContainer = target;
+  do { //find scroll container
+    scrollContainer = scrollContainer.parentNode;
+    if (!scrollContainer) return;
+    scrollContainer.scrollTop += 1;
+  } while (scrollContainer.scrollTop == 0);
+
+  var targetY = 0;
+  do { //find the top of target relatively to the container
+    if (target == scrollContainer) break;
+    targetY += target.offsetTop;
+  } while (target = target.offsetParent);
+
+  scroll = function (c, a, b, i) {
+    i++;
+    if (i > 30) return;
+    c.scrollTop = a + (b - a) / 30 * i;
+    setTimeout(function () {
+      scroll(c, a, b, i);
+    }, 20);
   }
+  // start scrolling
+  scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+
+// Smooth Scroll in Plain Javascript
+window.smoothScroll = function (target) {
+
+  var scrollContainer = target;
+  do { //find scroll container
+    scrollContainer = scrollContainer.parentNode;
+    if (!scrollContainer) return;
+    scrollContainer.scrollTop += 1;
+  } while (scrollContainer.scrollTop == 0);
+
+  var targetY = 0;
+  do { //find the top of target relatively to the container
+    if (target == scrollContainer) break;
+    targetY += target.offsetTop;
+  } while (target = target.offsetParent);
+
+  scroll = function (c, a, b, i) {
+    i++;
+    if (i > 30) return;
+    c.scrollTop = a + (b - a) / 30 * i;
+    setTimeout(function () {
+      scroll(c, a, b, i);
+    }, 20);
+  }
+  // start scrolling
+  scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+
+//Send Email
+function sendMail() {
+  
 }
 /* Modernizr 2.8.3 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
@@ -845,3 +951,119 @@ References:
 		}
 	};
 })(this);
+/**
+ * Author: Jason Farrell
+ * Author URI: http://useallfive.com/
+ *
+ * Description: Checks if a DOM element is truly visible.
+ * Package URL: https://github.com/UseAllFive/true-visibility
+ */
+Element.prototype.isVisible = function() {
+
+    'use strict';
+
+    /**
+     * Checks if a DOM element is visible. Takes into
+     * consideration its parents and overflow.
+     *
+     * @param (el)      the DOM element to check if is visible
+     *
+     * These params are optional that are sent in recursively,
+     * you typically won't use these:
+     *
+     * @param (t)       Top corner position number
+     * @param (r)       Right corner position number
+     * @param (b)       Bottom corner position number
+     * @param (l)       Left corner position number
+     * @param (w)       Element width number
+     * @param (h)       Element height number
+     */
+    function _isVisible(el, t, r, b, l, w, h) {
+        var p = el.parentNode,
+                VISIBLE_PADDING = 2;
+
+        if ( !_elementInDocument(el) ) {
+            return false;
+        }
+
+        //-- Return true for document node
+        if ( 9 === p.nodeType ) {
+            return true;
+        }
+
+        //-- Return false if our element is invisible
+        if (
+             '0' === _getStyle(el, 'opacity') ||
+             'none' === _getStyle(el, 'display') ||
+             'hidden' === _getStyle(el, 'visibility')
+        ) {
+            return false;
+        }
+
+        if (
+            'undefined' === typeof(t) ||
+            'undefined' === typeof(r) ||
+            'undefined' === typeof(b) ||
+            'undefined' === typeof(l) ||
+            'undefined' === typeof(w) ||
+            'undefined' === typeof(h)
+        ) {
+            t = el.offsetTop;
+            l = el.offsetLeft;
+            b = t + el.offsetHeight;
+            r = l + el.offsetWidth;
+            w = el.offsetWidth;
+            h = el.offsetHeight;
+        }
+        //-- If we have a parent, let's continue:
+        if ( p ) {
+            //-- Check if the parent can hide its children.
+            if ( ('hidden' === _getStyle(p, 'overflow') || 'scroll' === _getStyle(p, 'overflow')) ) {
+                //-- Only check if the offset is different for the parent
+                if (
+                    //-- If the target element is to the right of the parent elm
+                    l + VISIBLE_PADDING > p.offsetWidth + p.scrollLeft ||
+                    //-- If the target element is to the left of the parent elm
+                    l + w - VISIBLE_PADDING < p.scrollLeft ||
+                    //-- If the target element is under the parent elm
+                    t + VISIBLE_PADDING > p.offsetHeight + p.scrollTop ||
+                    //-- If the target element is above the parent elm
+                    t + h - VISIBLE_PADDING < p.scrollTop
+                ) {
+                    //-- Our target element is out of bounds:
+                    return false;
+                }
+            }
+            //-- Add the offset parent's left/top coords to our element's offset:
+            if ( el.offsetParent === p ) {
+                l += p.offsetLeft;
+                t += p.offsetTop;
+            }
+            //-- Let's recursively check upwards:
+            return _isVisible(p, t, r, b, l, w, h);
+        }
+        return true;
+    }
+
+    //-- Cross browser method to get style properties:
+    function _getStyle(el, property) {
+        if ( window.getComputedStyle ) {
+            return document.defaultView.getComputedStyle(el,null)[property];
+        }
+        if ( el.currentStyle ) {
+            return el.currentStyle[property];
+        }
+    }
+
+    function _elementInDocument(element) {
+        while (element = element.parentNode) {
+            if (element == document) {
+                    return true;
+            }
+        }
+        return false;
+    }
+
+    return _isVisible(this);
+
+};
