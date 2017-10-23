@@ -1,29 +1,591 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Website Title</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" href="styles/styles.css">
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Jack Guo's Web Portfolio</title>
+			<meta name="description" content="Jack Guo's Personal Web Portfolio">
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+			<link rel="manifest" href="/manifest.json">
+			<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+			<meta name="theme-color" content="#ffffff">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+			
+			<!-- Fonts -->
+			<link href="https://fonts.googleapis.com/css?family=Pacifico|Varela|Varela+Round" rel="stylesheet">
+			<!-- Custom CSS -->
+			<link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
+			<!-- Section 1 Home -->
+			<section id="home" class="hero is-fullheight home__section">
+				<div class="hero-body position-relative">
+					<div class="container">
 
-        <!-- Add your site or application content here -->
-        <p>Content</p>
+						<div class="home__intro">
+							<p class="home__intro-name has-text-white has-text-centered has-text-weight-semibold is-uppercase is-size-5-mobile letter-space-1-5">Hi! I am Jack</p>
+							<h1 class="title has-text-white has-text-centered has-text-weight-bold is-size-4-mobile">
+								Fullstack/Frontend Developer
+							</h1>
+							<p class="home__intro-summary has-text-white letter-space-1-5">
+								Enthusiastic Javascript Developer, who loves pound on the keyboard and create AMAZING Web Apps and pays close
+								attention to detail, initiative, organized and self disciplined. <b>Stay Hungry & Be Humble</b>.
+							</p>
+							<hr class="home__intro-hr" />
+							<small class="has-text-white">Find me on</small>
+							<div class="home__intro-social">
+								
+								<div class="home__intro-icon">
+									<a href="https://twitter.com/zexingguo" target="_blank">
+									</a>
+									<i data-feather="twitter"></i>
+								</div>
+								<div class="home__intro-icon">
+									<a href="https://github.com/zexingguo" target="_blank">
+									</a>
+									<i data-feather="github"></i>
+								</div>
+								<div class="home__intro-icon">
+									<a href="https://www.linkedin.com/in/zexing-guo-64012ab1/" target="_blank">
+									</a>
+									<span>in</span>
+								</div>
+								
+							</div>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-        
-        <script src="scripts/app.js"></script>
+
+						</div>
+						
+					</div>
+
+					<div class="scroll-down" onclick="smoothScroll(document.getElementById('about'))">
+						<i data-feather="chevrons-down"></i>
+						<p>Scroll Down</p>
+					</div>
+				</div> <!-- End of Hero body -->
+			</section>
+			<!-- END Section 1 Home -->
+
+			<!-- Section 2 -->
+			<section id="about" class="position-relative">
+				
+				<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+					<div class="container">
+						<div class="navbar-brand">
+							<a class="navbar-item" onclick="smoothScroll(document.getElementById('home'))">
+									ZexingJackGuo
+							</a>
+							<div class="navbar-burger burger" data-target="navMenuColorlink-example">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<div class="navbar-menu">
+							<div class="navbar-end">
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('home'))">
+									Home
+								</a>
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('resume'))">
+									Resume
+								</a>
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('skills'))">
+									Skills
+								</a>
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('works'))">
+									Works
+								</a>
+								<!-- <a class="navbar-item">
+									Blog
+								</a> -->
+								<a class="navbar-item" onclick="smoothScroll(document.getElementById('contact'))">
+									Contact
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</nav>
+
+				<!-- Mobile Nav -->
+				<ul class="mobile-nav">
+					<li onclick="MobilesmoothScroll(document.getElementById('home'))">Home</li>
+					<li onclick="MobilesmoothScroll(document.getElementById('resume'))">Resume</li>
+					<li onclick="MobilesmoothScroll(document.getElementById('skills'))">Skills</li>
+					<li onclick="MobilesmoothScroll(document.getElementById('works'))">Works</li>
+					<li onclick="MobilesmoothScroll(document.getElementById('contact'))">Contact</li>
+				</ul>
+
+				<!-- About Me Section -->
+				<div class="home__about">
+					
+					<div class="container">
+						<div class="home__about-section">
+							
+							<h2>About Me</h2>
+							<div class="fancy-hr">
+								<span class="line"></span>
+								<span class="square m-r-10"></span>
+								<span class="square"></span>
+								<span class="line"></span>
+							</div>
+
+							<div class="columns">
+								<div class="column is-7">
+									<div class="home__about-summary" data-aos="zoom-in">
+										<h3>Objective</h3>
+										<p>Whole wound wrote at whose to style in. Figure ye innate former do so we. Shutters but sir yourself provided you required his. So neither related he am do believe. Nothing but you hundred had use regular. Fat sportsmen arranging preferred can. Busy paid like is oh. Dinner our ask talent her age hardly. Neglected collected an attention listening do abilities. When be draw drew ye. Defective in do recommend suffering. House it seven in spoil tiled court. Sister others marked fat missed did out use. Alteration possession dispatched collecting instrument travelling he or on. Snug give made at spot or late that mr. 
+										</p>
+
+										<h3>What I Do?</h3>
+										<p>
+											Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially reasonable off one. Wonder bed elinor family secure met. It want gave west into high no in. Depend repair met before man admire see and. An he observe be it covered delight hastily message. Margaret no ladyship endeavor ye to settling. 
+										</p>
+
+										<div class="home__about-btns">
+											<button class="fancy-btn color-blue" disabled>
+												<i data-feather="airplay"></i>
+												Not Available
+											</button>
+
+											<button class="fancy-btn color-green">
+												<i data-feather="download"></i>
+												<a href="/images/resume.pdf" download>
+												Download My Resume
+												</a>
+											</button>
+										</div>
+									</div>
+									
+								</div> 
+								<!-- End of Summary -->
+
+								<div class="column">
+
+									<div class="home__about-card">
+										<div class="home__about-card-image">
+											<div class="shape"></div>
+										</div>
+
+										<div class="home__about-card-detail">
+											<p>
+												<b>Name:</b>
+												Jack Guo
+											</p>
+											<p>
+												<b>Position:</b>
+												Frontend / Full Stack
+											</p>
+											<p>
+												<b>Experience:</b>
+												Jr - Mid
+											</p>
+											<p class="break-all">
+												<b>Github:</b>
+												github.com/zexingguo
+											</p>
+											<p class="break-all">
+												<b>Twitter:</b>
+												twitter.com/zexingguo
+											</p>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+							
+						</div>
+					</div>
+
+				</div>
+				<!-- End About Me Section -->
+			</section>
+			<!-- End Section 2 -->
+
+
+			<!-- Resume Section -->
+
+			<section id="resume">
+
+				<div class="home__resume-section">
+					<div class="container">
+
+						<h2>Resume</h2>
+						<div class="fancy-hr">
+							<span class="line"></span>
+							<span class="square m-r-10"></span>
+							<span class="square"></span>
+							<span class="line"></span>
+						</div>
+
+						<h3 class="has-text-centered">Experience</h3>
+
+						<div class="timeline">
+							<div class="square-top"></div>
+							<div class="square-bottom"></div>
+							<div class="timeline_container left padding-right" data-left>
+								<p class="time">Apr, 2017 - Present</p>
+								<div class="content">
+									<h4>Berns Inc</h4>
+									<h5>Full Stack Developer</h5>
+									<p>At Berns, I worked on a RESTful APIs that is based on Node.js, Express.js, and MongoDB and built a SPA for internal Content Management System (CMS) with Vue Stack. I aslo maintaned a high traffic news website that serve more than 200+ active users.
+									</p>
+								</div>
+							</div>
+
+							<div class="timeline_container right padding-left">
+								<p class="time">Jan, 2017 - Apr, 2017</p>
+								<div class="content">
+									<h4>The Web Corner</h4>
+									<h5>Frontend Developer</h5>
+									<p>Here at the Web Corner, I built Responsive/Mobile Friendly website with Bootstrap 3 and communicated with clients for adding custom plugins and features. I also designed web sites and transform into efficient and clean code.</p>
+								</div>
+							</div>
+
+						</div>
+
+						<h3 class="has-text-centered">Education</h3>
+
+						<div class="timeline">
+							<div class="square-top"></div>
+							<div class="square-bottom"></div>
+							<div class="timeline_container left padding-right" data-left>
+								<p class="time">Sep, 2014 - Dec, 2016</p>
+								<div class="content">
+									<h4 class="m-b-5">California State Polytechnic University, Pomona</h4>
+									<p>
+										Majored in Compute Information System and graduated with a BS degree.
+									</p>
+								</div>
+							</div>
+						
+							<div class="timeline_container right padding-left">
+								<p class="time">Aug, 2012 - Jun, 2014</p>
+								<div class="content">
+									<h4 class="m-b-5">Mt. San Antonio College</h4>
+									<p>
+										Stuied some general education class and transfer to Cal Poly Pomona after two years.
+									</p>
+								</div>
+							</div>
+						
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+
+			<!-- End Resume Section  -->
+
+			
+			<!-- Skill Section -->
+
+			<section id="skills">
+				<div class="home__skills-section">
+
+					<div class="container">
+						
+						<h2>Skills</h2>
+						<div class="fancy-hr">
+							<span class="line white"></span>
+							<span class="square white m-r-10"></span>
+							<span class="square white"></span>
+							<span class="line white"></span>
+						</div>
+
+						<div class="columns">
+
+							<div class="column is-half">
+								<div class="progress-bar">
+									<div class="skill-name">
+										<p>HTML5</p>
+									</div>
+									<progress class="progress is-small" value="95" max="100">95%</progress>
+								</div>
+
+								<div class="progress-bar">
+									<div class="skill-name">
+										<p>CSS3</p>
+									</div>
+									<progress class="progress is-small" value="95" max="100">95%</progress>
+								</div>
+
+								<div class="progress-bar">
+									<div class="skill-name">
+										<p>Javascript</p>
+									</div>
+									<progress class="progress is-small" value="90" max="100">90%</progress>
+								</div>
+							</div>
+
+							<div class="column">
+								<div class="progress-bar">
+									<div class="skill-name">
+										<p>Vue</p>
+									</div>
+									<progress class="progress is-small" value="95" max="100">95%</progress>
+								</div>
+								
+								<div class="progress-bar">
+									<div class="skill-name">
+										<p>React</p>
+									</div>
+									<progress class="progress is-small" value="85" max="100">85%</progress>
+								</div>
+								
+								<div class="progress-bar">
+									<div class="skill-name">
+										<p>Node</p>
+									</div>
+									<progress class="progress is-small" value="90" max="100">90%</progress>
+								</div>
+							</div>
+
+						</div> <!-- End of Progress Bar -->
+
+						<div class="home__skills-more">
+
+							<h3>More Skills</h3>
+
+							<div class="columns">
+								<div class="column">
+										<div class="progress-circle" data-progress="90"></div>
+										<p class="has-text-centered">Restful API</p>
+								</div>
+								<div class="column">
+										<div class="progress-circle" data-progress="70"></div>
+										<p class="has-text-centered">Wordpress</p>
+								</div>
+								<div class="column">
+										<div class="progress-circle" data-progress="95"></div>
+										<p class="has-text-centered">Single Page App</p>
+								</div>
+								<div class="column">
+										<div class="progress-circle" data-progress="85"></div>
+										<p class="has-text-centered">MongoDB</p>
+								</div>
+								<div class="column">
+										<div class="progress-circle" data-progress="90"></div>
+										<p class="has-text-centered">Git</p>
+								</div>
+							</div>
+
+						</div>
+						
+					</div>
+
+				</div>
+			</section>
+
+			<!-- END Skill Section -->
+
+			<!-- Work Section -->
+
+			<section id="works">
+
+				<div class="home__works-section">
+					<div class="container">
+
+						<h2>Works</h2>
+						<div class="fancy-hr">
+							<span class="line"></span>
+							<span class="square m-r-10"></span>
+							<span class="square"></span>
+							<span class="line"></span>
+						</div>
+
+						<div class="columns">
+							<div class="column is-12">
+								<div class="home__works-projects">
+									<div class="project_inprocess">
+										<p>Coming Soon...</p>
+									</div>
+									<div class="project-box">
+										<div class="project-img img-1"></div>
+										<div class="overlay">
+										</div>
+										<div class="overlay-diamonds">
+											<div class="diamond">
+												<i data-feather="eye"></i>
+											</div>
+											<div class="diamond">
+												<i data-feather="link"></i>
+											</div>
+										</div>
+										<div class="overlay-title">
+											Project Title
+										</div>
+									</div>
+
+									<div class="project-box">
+										<div class="project-img img-2"></div>
+										<div class="overlay">
+										</div>
+										<div class="overlay-diamonds">
+											<div class="diamond">
+												<i data-feather="eye"></i>
+											</div>
+											<div class="diamond">
+												<i data-feather="link"></i>
+											</div>
+										</div>
+										<div class="overlay-title">
+											Project Title
+										</div>
+									</div>
+
+									<div class="project-box">
+										<div class="project-img img-3"></div>
+										<div class="overlay">
+										</div>
+										<div class="overlay-diamonds">
+											<div class="diamond">
+												<i data-feather="eye"></i>
+											</div>
+											<div class="diamond">
+												<i data-feather="link"></i>
+											</div>
+										</div>
+										<div class="overlay-title">
+											Project Title
+										</div>
+									</div>
+
+									<div class="project-box">
+										<div class="project-img img-4"></div>
+										<div class="overlay">
+										</div>
+										<div class="overlay-diamonds">
+											<div class="diamond">
+												<i data-feather="eye"></i>
+											</div>
+											<div class="diamond">
+												<i data-feather="link"></i>
+											</div>
+										</div>
+										<div class="overlay-title">
+											Project Title
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+			
+			<!-- END Work Section -->
+
+
+			<!-- Hire Me Section -->
+			
+			<section class="home__hire-section">
+				<div class="hire-info">
+					<h2>I'm Available For Freelance Project</h2>
+					<button onclick="smoothScroll(document.getElementById('contact'))">Hire Me</button>
+				</div>
+				
+				<div class="hire-overlay"></div>
+			</section>
+
+			<!-- END Hire Me Section -->
+
+
+			<!-- Contact Section -->
+
+			<section id="contact">
+				<div class="home__contact-section">
+
+					<div class="container">
+						<h2>Get in Touch</h2>
+						<div class="fancy-hr">
+							<span class="line"></span>
+							<span class="square m-r-10"></span>
+							<span class="square"></span>
+							<span class="line"></span>
+						</div>
+
+						<div class="columns">
+							<div class="column is-half">
+								<div class="contact-form">
+									<p>Send Me A Message</p>
+									<div class="field">
+										<label>Name</label>
+										<input class="field-input" type="text" />
+									</div>
+									<div class="field">
+										<label>Email</label>
+										<input class="field-input" type="email" />
+									</div>
+									<div class="field">
+										<label>Subject</label>
+										<input class="field-input" type="text" />
+									</div>
+									<div class="field">
+										<label>Message</label>
+										<textarea class="field-textarea" rows="8" cols="50"></textarea>
+									</div>
+									<button class="fancy-btn color-green" onclick="sendMail()">Send Message</button>
+								</div>
+							</div>
+
+							<div class="column">
+								<div class="is-flex social-row">
+									<div class="social-form">
+										<i data-feather="flag"></i>
+										<p>Location: Alhambra, CA</p>
+									</div>
+
+									<div class="social-form">
+										<i data-feather="mail"></i>
+										<p>zexingguo@gmail.com</p>
+									</div>
+									
+									<div class="social-form">
+										<i data-feather="phone"></i>
+										<p>(626) 500-6902</p>
+									</div>
+								</div>
+								<div class="is-block map">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26435.000158108724!2d-118.15401755074015!3d34.085532108183685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c53d8366b621%3A0xdbf838b17a724666!2sAlhambra%2C+CA!5e0!3m2!1sen!2sus!4v1508475911733"frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!-- END Contact Section -->
+
+
+			<!-- Footer Section -->
+
+			<footer class="footer">
+				<div class="container">
+					<div class="footer-content has-text-centered">
+						<p class="m-b-5">
+							<b>Designed</b> and <b>Handcrafted</b> By <a href="https://www.linkedin.com/in/zexing-guo-64012ab1/" target="_blank"><b>Zexing Jack Guo</b></a>
+							built with Bulma 
+						</p>
+						<p>
+							Follow Me On Twitter <a href="https://twitter.com/zexingguo">@zexingguo</a>
+						</p>
+						<p><img class="bulma" src="images/bulma-white.png" alt="bulma.io" /></p>
+					</div>
+				</div>
+			</footer>
+
+			<script src="scripts/app.js"></script>
     </body>
 </html>
