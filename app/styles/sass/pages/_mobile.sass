@@ -1,4 +1,5 @@
 .mobile-nav
+  // display: none
   visibility: hidden
   background: #ffffff
   border: 1px solid #eeeeee
@@ -6,7 +7,8 @@
   top: 53px
   right: 0
   z-index: 11
-  max-width: 0  
+  width: 200px
+  transform: translateX(200px)
   transition: .5s
   border-bottom-left-radius: 3px
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1)
@@ -19,5 +21,6 @@
       color: #ffffff
 
 .show-nav
+  // display: block
   visibility: visible
-  max-width: 100%
+  transform: translateX(0)
