@@ -1,0 +1,26 @@
+.mobile-nav
+  // display: none
+  visibility: hidden
+  background: #ffffff
+  border: 1px solid #eeeeee
+  position: absolute
+  top: 53px
+  right: 0
+  z-index: 11
+  width: 200px
+  transform: translateX(200px)
+  transition: .5s
+  border-bottom-left-radius: 3px
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1)
+  li
+    padding: 15px 45px
+    transition: .2s
+    cursor: pointer
+    &:hover
+      background: $vue-green
+      color: #ffffff
+
+.show-nav
+  // display: block
+  visibility: visible
+  transform: translateX(0)

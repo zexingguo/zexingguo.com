@@ -1,0 +1,159 @@
+//About Section
+#about
+  overflow: hidden
+a.navbar-item
+  font-family: 'Varela Round', sans-serif
+  color: $dark-blue
+
+.navbar-brand a.navbar-item 
+  font-family: 'Pacifico', cursive
+  font-size: 25px
+  color: $dark-blue
+
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active
+  background-color: $vue-green
+  color: #fff
+
+.home__about-section
+  display: flex
+  flex-direction: column
+  margin-top: 80px
+  margin-bottom: 80px
+  h2
+    font-size: $size-1
+    font-family: 'Varela Round', sans-serif
+    text-align: center
+    text-transform: uppercase
+    color: $dark-blue
+
+.fancy-hr
+  display: flex
+  margin: 20px auto 50px
+  align-items: center
+  justify-content: center
+
+  .line
+    display: block
+    height: 2px
+    width: 35px
+    background: #dbdbdb
+    margin: 0 10px
+    &.white
+      background: #fff
+  
+  .square 
+    display: block
+    height: 13px
+    width: 13px
+    background: #dbdbdb
+    transform: rotate(45deg)
+    &.white
+      background: #fff
+
+.home__about-summary
+  padding: 0 20px
+
+  h3
+    font-family: 'Varela Round', sans-serif
+    text-transform: uppercase
+    font-weight: bold
+    margin-bottom: 20px
+    color: $dark-blue
+  p 
+    margin-bottom: 40px
+
+.home__about-btns
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+.fancy-btn
+  display: flex
+  align-items: center
+  position: relative
+  border: 0
+  padding: 20px 12px
+  margin-right: 20px
+  margin-top: 10px
+  font-family: 'Varela Round', sans-serif
+  font-size: 11px
+  font-weight: bold
+  text-transform: uppercase
+  letter-spacing: .8px
+  color: #ffffff
+  border-radius: 5px
+  outline: none
+  cursor: pointer
+  z-index: 1
+  transition: top .5s
+  &:hover
+    color: #ffffff
+  &:disabled
+    background: #494949 !important
+    box-shadow: none
+    opacity: .3
+    box-shadow: 0px 4px 0px 0px #494949
+    cursor: not-allowed
+
+  &:active
+    box-shadow: none
+    top: 4px
+  svg
+    height: 15px
+    width: 15px
+    margin-right: 10px
+  
+.color-blue
+  background: $react-blue
+  box-shadow: 0px 4px 0px 0px $react-blue-shadow
+.color-green
+  background: $vue-green
+  box-shadow: 0px 4px 0px 0px $vue-green-shadow
+    
+.home__about-card
+  display: block
+  margin: 0 auto
+  border: 1px solid $grey-lighter
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
+  box-shadow: rgba(10, 10, 10, 0.1) 0px 2px 3px
+  +desktop
+    width: 50%
+  +tablet
+    width: 60%
+  +until(769px)
+    width: 50%
+  +until(769px)
+    width: 50%
+  +until(450px)
+    width: 90%
+  
+  .home__about-card-image
+    position: relative
+    width: 100%
+    height: 300px
+    background: url('/images/jack.jpg') center center / cover no-repeat
+    &::after
+      content: ''
+      display: block
+      background: #fff
+      width: 100%
+      position: absolute
+      bottom: -2px
+      height: 3px
+    
+    .shape
+      display: block
+      width: 100%
+      height: 300px
+      clip-path: polygon(50% 100%, 100% 68%, 100% 100%, 0 100%, 0 70%)
+      background: #fff
+
+  .home__about-card-detail
+    display: block
+    padding: 30px 20px
+    
+    p 
+      padding-bottom: 5px
+      margin-bottom: 15px
+      border-bottom: 1px solid #eee

@@ -1,0 +1,22 @@
+//frameworks
+@import 'bulma/utilities/_all';
+@import 'bulma/base/_all';
+@import 'bulma/grid/columns';
+@import 'bulma/elements/container';
+@import 'bulma/layout/_all';
+@import 'bulma/components/navbar';
+@import 'bulma/elements/progress';
+
+//global things
+@import 'helpers/helper';
+
+//Components
+@import 'components/_home';
+@import 'components/_aboutme';
+@import 'components/_resume';
+@import 'components/_skills';
+@import 'components/_works';
+@import 'components/_hire';
+@import 'components/_contact';
+@import 'components/_footer';
+@import 'components/_mobile';

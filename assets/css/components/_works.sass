@@ -1,0 +1,146 @@
+.home__works-section
+  margin-top: 80px
+  margin-bottom: 80px
+  padding: 0 20px
+  h2
+    font-size: $size-1
+    font-family: 'Varela Round', sans-serif
+    text-align: center
+    text-transform: uppercase
+    color: $dark-blue
+
+.home__works-projects
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 20px 5px
+  .project_inprocess
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: #fff
+    opacity: .9
+    z-index: 10
+    p
+      position: absolute
+      width: 100%
+      top: 50%
+      transform: translateY(-50%)
+      font-size: $size-2
+      color: $dark-blue
+      text-transform: uppercase
+      text-align: center
+      z-index: 11
+      +tablet 
+        font-size: $size-3
+      +mobile 
+        font-size: $size-5
+
+  .project-box
+    display: block
+    position: relative
+    width: 300px
+    height: 250px
+    background: #fff
+    border: 1px solid #eee
+    box-shadow: rgba(10, 10, 10, 0.1) 0px 2px 3px
+    &:hover .overlay
+      opacity: .8
+    &:hover .overlay-title
+      opacity: 1
+      bottom: 5px
+    &:hover .overlay-diamonds > .diamond
+      transform: scale(1) rotate(45deg)
+      
+    .project-img
+      display: block
+      position: absolute
+      top: 5px
+      right: 5px
+      bottom: 5px
+      left: 5px
+      &.img-1
+        background: url('/images/react.png')
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        border-radius: 3px
+      &.img-2
+        background: url('/images/node.png')
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        border-radius: 3px
+      &.img-3
+        background: url('/images/js.png')
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        border-radius: 3px
+      &.img-4
+        background: url('/images/vue.jpg')
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        border-radius: 3px
+    .overlay
+      display: block
+      position: absolute
+      opacity: 0
+      z-index: 3
+      top: 5px
+      right: 5px
+      bottom: 5px
+      left: 5px
+      background: #212526
+      border-radius: 3px
+      transition: opacity .5s
+    .overlay-title
+      position: absolute
+      opacity: 0
+      z-index: 4
+      left: 5px
+      right: 5px
+      bottom: -2px
+      padding: 10px
+      background: $vue-green
+      color: #fff
+      text-transform: uppercase
+      font-size: 15px
+      font-weight: bold
+      text-align: center
+      transition: .6s
+    .overlay-diamonds
+      display: flex
+      position: absolute
+      z-index: 4
+      align-items: center
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -60%)
+      .diamond
+        width: 30px
+        height: 30px
+        border: 1px solid #69c2a1
+        border-radius: 3px
+        position: relative
+        transform: scale(0) rotate(0deg)
+        margin-right: 15px
+        transition: .7s
+        cursor: pointer
+        &:hover
+          background: #69c2a1
+        &:hover svg
+          color: #fff  
+        svg
+          width: 17px
+          height: 17px
+          color: #69c2a1
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%) rotate(-45deg)
+          transition: .3s

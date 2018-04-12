@@ -1,5 +1,24 @@
+# dependencies
 node_modules
-.DS_Store
-*.DS_Store
-**/.DS_Store
+
+# logs
+*.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Intellij idea
+.idea
+*iml
+
+# VSCode
 .vscode
+
+# Generated files
+static/manifest*.json
+static/sw.js
+static/workbox-sw*.js
+sw.*
